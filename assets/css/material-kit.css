@@ -13,6 +13,10 @@
 
  */
 /*     brand Colors */
+.one{
+  font-size: 40px;
+}
+
 
 table {
   border-collapse: collapse;
@@ -39,6 +43,7 @@ td
      text-align: center; 
     vertical-align: middle;
 }
+
 
 
 
