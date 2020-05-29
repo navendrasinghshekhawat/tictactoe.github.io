@@ -10,6 +10,12 @@ var a31=document.getElementById('seven');
 var a32=document.getElementById('eight');
 var a33=document.getElementById('nine');
 
+var reset=document.getElementById('reset');
+//reset logic
+reset.addEventListener('click',function(){
+location.reload();
+});
+
 //function set(a11){
 //	a11.innerHtml="<strong>X</strong>"
 //}
