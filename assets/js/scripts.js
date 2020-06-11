@@ -11,7 +11,15 @@ var cella3=a3.getElementsByTagName("td");
 var reset=document.getElementById('reset');
 //reset logic
 reset.addEventListener('click',function(){
-location.reload();
+		cella1[0].innerText="";
+		cella1[1].innerText="";
+		cella1[2].innerText="";
+		cella2[0].innerText="";
+		cella2[1].innerText="";
+		cella2[2].innerText="";
+		cella3[0].innerText="";
+		cella3[1].innerText="";
+		cella3[2].innerText="";
 });
 
 //flush logic
