@@ -1,14 +1,12 @@
-var a11=document.getElementById('one');
-var a12=document.getElementById('two');
-var a13=document.getElementById('three');
+var a1=document.getElementById('one');
+var a2=document.getElementById('two');
+var a3=document.getElementById('three');
 
-var a21=document.getElementById('four');
-var a22=document.getElementById('five');
-var a23=document.getElementById('six');
+var cella1=a1.getElementsByTagName("td");
+var cella2=a2.getElementsByTagName("td");
+var cella3=a3.getElementsByTagName("td");
 
-var a31=document.getElementById('seven');
-var a32=document.getElementById('eight');
-var a33=document.getElementById('nine');
+
 
 var reset=document.getElementById('reset');
 //reset logic
@@ -16,89 +14,151 @@ reset.addEventListener('click',function(){
 location.reload();
 });
 
+//flush logic
+function flush(flu){
+	if(flu==="X" || flu==="O")
+	{
+		alert(flu + " Wins.");
+	}
+}
+
+//winning logic
+function win(){
+	//horizontal check
+	if(cella1[0].innerText=== cella1[1].innerText && cella1[2].innerText===cella1[0].innerText){
+		flush(cella1[0].innerText);
+	}
+	if(cella2[0].innerText=== cella2[1].innerText && cella2[2].innerText===cella2[0].innerText)
+	{
+		flush(cella2[0].innerText);
+	}
+	if(cella3[0].innerText=== cella3[1].innerText && cella3[2].innerText===cella3[0].innerText)
+	{
+		flush(cella3[0].innerText);
+	}
+
+	//vertical check
+	if(cella1[0].innerText=== cella2[0].innerText && cella1[0].innerText===cella3[0].innerText){
+		flush(cella1[0].innerText);
+	}
+	if(cella1[1].innerText=== cella2[1].innerText && cella1[1].innerText===cella3[1].innerText){
+		flush(cella1[1].innerText);
+	}
+	if(cella1[2].innerText=== cella2[2].innerText && cella1[2].innerText===cella3[2].innerText){
+		flush(cella1[2].innerText);
+	}
+
+	//diagonal check
+	if(cella1[0].innerText=== cella2[1].innerText && cella1[0].innerText===cella3[2].innerText){
+		flush(cella1[0].innerText);
+	}
+	if(cella1[2].innerText=== cella2[1].innerText && cella1[2].innerText===cella3[0].innerText){
+		flush(cella1[2].innerText);
+	}
+}
+
+
+
 //////
 	//on single click
 var i=0;
 
-a11.addEventListener('click',function(){
+cella1[0].addEventListener('click',function(){
 	if(i%2==0){
-a11.innerText="X";
-console.log(a11);
+		cella1[0].innerText="X";
+		win();
 i=i+1;}
 else {
-	a11.innerText="O";
+	cella1[0].innerText="O";
+	win();
 i=i+1;
 }
 });
-a12.addEventListener('click',function(){
+cella1[1].addEventListener('click',function(){
 	if(i%2==0){
-a12.innerText="X";
+		cella1[1].innerText="X";
+		win();
 i=i+1;}
 else {
-	a12.innerText="O";
+	cella1[1].innerText="O";
+	win();
 i=i+1;
 }
 });
-a13.addEventListener('click',function(){
+cella1[2].addEventListener('click',function(){
 	if(i%2==0){
-a13.innerText="X";
+		cella1[2].innerText="X";
+		win();
 i=i+1;}
 else {
-	a13.innerText="O";
+	cella1[2].innerText="O";
+	win();
 i=i+1;
 }
 });
-a21.addEventListener('click',function(){
+cella2[0].addEventListener('click',function(){
 	if(i%2==0){
-a21.innerText="X";
+cella2[0].innerText="X";
+win();
 i=i+1;}
 else {
-	a21.innerText="O";
+	cella2[0].innerText="O";
+	win();
 i=i+1;
 }
 });
-a22.addEventListener('click',function(){
+cella2[1].addEventListener('click',function(){
 	if(i%2==0){
-a22.innerText="X";
+		cella2[1].innerText="X";
+		win();
 i=i+1;}
 else {
-	a22.innerText="O";
+	cella2[1].innerText="O";
+	win();
 i=i+1;
 }
 });
-a23.addEventListener('click',function(){
+cella2[2].addEventListener('click',function(){
 	if(i%2==0){
-a23.innerText="X";
+		cella2[2].innerText="X";
+		win();
 i=i+1;}
 else {
-	a23.innerText="O";
+	cella2[2].innerText="O";
+	win();
 i=i+1;
 }
 });
-a31.addEventListener('click',function(){
+cella3[0].addEventListener('click',function(){
 	if(i%2==0){
-a31.innerText="X";
+		cella3[0].innerText="X";
+		win();
 i=i+1;}
 else {
-	a31.innerText="O";
+	cella3[0].innerText="O";
+	win();
 i=i+1;
 }
 });
-a32.addEventListener('click',function(){
+cella3[1].addEventListener('click',function(){
 	if(i%2==0){
-a32.innerText="X";
+		cella3[1].innerText="X";
+		win();
 i=i+1;}
 else {
-	a32.innerText="O";
+	cella3[1].innerText="O";
+	win();
 i=i+1;
 }
 });
-a33.addEventListener('click',function(){
+cella3[2].addEventListener('click',function(){
 	if(i%2==0){
-a33.innerText="X";
+		cella3[2].innerText="X";
+		win();
 i=i+1;}
 else {
-	a33.innerText="O";
+	cella3[2].innerText="O";
+	win();
 i=i+1;
 }
 });
