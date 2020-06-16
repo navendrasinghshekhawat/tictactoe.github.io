@@ -3,4 +3,4 @@
      On a single click, you will always receive the toggle of the last value you received.<br>
 As soon as someone wins, there will be an alert telling the winner.<br>
   There are two inputs in the game, "<b>X</b>" and "<b>O</b>".
-  </p>
+</p>
