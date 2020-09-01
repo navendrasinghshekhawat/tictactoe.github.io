@@ -1,4 +1,4 @@
-<b><h1 align="center">TICTACTOE</h1></b><br>
+<b><h1 align="center">TIC-TAC-TOE</h1></b><br>
 <p align="center">This is a pure frontend vanilla javascript-based Tic-Tac-Toe game developed for educational purposes only.<br>
      On a single click, you will always receive the toggle of the last value you received.<br>
 As soon as someone wins, there will be an alert telling the winner.<br>
